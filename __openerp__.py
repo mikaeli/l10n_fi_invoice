@@ -21,8 +21,8 @@
 
 # noinspection PyStatementEffect
 {
-    "name": "Finnish Invoice",
-    "version": "0.2.0",
+    "name": "Finnish Invoice (RF-version)",
+    "version": "0.3.0",
     "license": "AGPL-3",
     "author": "Avoin.Systems",
     "category": "Localization",
@@ -30,7 +30,9 @@
     "images": ["static/description/icon.png"],
     "depends": [
         'base',
-        'account'
+        'account',
+        'report',
+        'email_template'
     ],
     "description": """
 Finnish Invoice

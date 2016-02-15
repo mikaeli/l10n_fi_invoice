@@ -11,10 +11,15 @@
                     <field name="date_delivered"/>
                 </xpath>
 
-                <xpath expr="//page[@string='Other Info']//group/field[@name='name']" position="after">
+            <field name="date_delivered" position="after">
                     <field name="invoice_number"/>
                     <field name="ref_number"/>
-                </xpath>
+            </field>
+
+            <xpath expr="//page[@string='Other Info']//group/field[@name='name']" position="after">
+                    <field name="barcode_string"/>
+            </xpath>
+
             </field>
         </record>
     </data>

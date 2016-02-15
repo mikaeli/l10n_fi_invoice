@@ -1,0 +1,146 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* l10n_fi_invoice
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-13 21:14+0000\n"
+"PO-Revision-Date: 2016-02-13 21:14+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_fi_invoice
+#: view:website:l10n_fi_invoice.report_layout_footer_finnish
+msgid "&bull;"
+msgstr "&bull;"
+
+#. module: l10n_fi_invoice
+#: view:website:l10n_fi_invoice.report_invoice_finnish_document
+msgid "Allekirjoitus"
+msgstr "Signature"
+
+
+#. module: l10n_fi_invoice
+#: view:website:l10n_fi_invoice.report_invoice_finnish_document
+msgid "Betalare"
+msgstr " "
+
+#. module: l10n_fi_invoice
+#: view:website:l10n_fi_invoice.report_invoice_finnish_document
+msgid "Betalningen fömedlas till mottagaren enligt villkoren för betalningsförmedling\n"
+"                                        och endast till det kontonummer som betalaren angivit."
+msgstr " "
+
+
+#. module: l10n_fi_invoice
+#: view:website:l10n_fi_invoice.report_invoice_finnish_document
+msgid "Eräpäivä"
+msgstr "Due Date"
+
+#. module: l10n_fi_invoice
+#: view:website:l10n_fi_invoice.report_invoice_finnish_document
+msgid "Från konto nr"
+msgstr " "
+
+#. module: l10n_fi_invoice
+#: view:website:l10n_fi_invoice.report_invoice_finnish_document
+msgid "Förf.dag"
+msgstr " "
+
+#. module: l10n_fi_invoice
+#: view:website:l10n_fi_invoice.report_invoice_finnish_document
+msgid "IBAN"
+msgstr "IBAN"
+
+
+
+#. module: l10n_fi_invoice
+#: view:website:l10n_fi_invoice.report_invoice_finnish_document
+msgid "Laskun numero"
+msgstr "Invoice number"
+
+#. module: l10n_fi_invoice
+#: view:website:l10n_fi_invoice.report_invoice_finnish_document
+msgid "Maksaja"
+msgstr "Payor"
+
+#. module: l10n_fi_invoice
+#: view:website:l10n_fi_invoice.report_invoice_finnish_document
+msgid "Maksu välitetään saajalle maksujenvälityksen ehtojen mukaisesti ja vain maksajan\n"
+"                                        tilinumeron perusteella."
+msgstr "The payment is valid only when paid to bank account of the Beneficiary.\n"
+"                  Upon payment, please use the Reference number. "
+
+#. module: l10n_fi_invoice
+#: view:website:l10n_fi_invoice.report_invoice_finnish_document
+msgid "Mottagare"
+msgstr " "
+
+#. module: l10n_fi_invoice
+#: view:website:l10n_fi_invoice.report_invoice_finnish_document
+msgid "Mottagarens\n"
+"                                                kontonummer"
+msgstr " "
+
+
+#. module: l10n_fi_invoice
+#: view:website:l10n_fi_invoice.report_invoice_finnish_document
+msgid "Payment term"
+msgstr "Payment term"
+
+#. module: l10n_fi_invoice
+#: view:website:l10n_fi_invoice.report_invoice_finnish_document
+msgid "Ref.nr"
+msgstr " "
+
+#. module: l10n_fi_invoice
+#: field:account.invoice,ref_number:0
+msgid "Reference Number"
+msgstr "Reference Number"
+
+#. module: l10n_fi_invoice
+#: view:website:l10n_fi_invoice.report_invoice_finnish_document
+msgid "Saaja"
+msgstr "Beneficiary"
+
+#. module: l10n_fi_invoice
+#: view:website:l10n_fi_invoice.report_invoice_finnish_document
+msgid "Saajan\n"
+"                                                tilinumero"
+msgstr "Beneficiary\n"
+"                                              Bank Account"
+
+
+#. module: l10n_fi_invoice
+#: view:website:l10n_fi_invoice.report_invoice_finnish_document
+msgid "Tililtä nro"
+msgstr "From Account"
+
+#. module: l10n_fi_invoice
+#: view:website:l10n_fi_invoice.report_invoice_finnish_document
+msgid "Underskrift"
+msgstr " "
+
+#. module: l10n_fi_invoice
+#: view:website:l10n_fi_invoice.report_invoice_finnish_document
+msgid "Viitenro"
+msgstr "Ref. num."
+
+
+#. module: l10n_fi_invoice
+#: view:website:l10n_fi_invoice.report_invoice_finnish_document
+msgid "Y-tunnus:"
+msgstr "Y-tunnus:"
+
+#. module: l10n_fi_invoice
+#: view:website:l10n_fi_invoice.report_invoice_finnish_document
+msgid "Your reference"
+msgstr "Your reference"
+
+

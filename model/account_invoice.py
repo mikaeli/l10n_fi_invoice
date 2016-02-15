@@ -38,7 +38,12 @@ class AccountInvoice(models.Model):
             invoice_number = re.sub(r'\D', '', self.number)
             checksum = sum((7, 3, 1)[idx % 3] * int(val)
                            for idx, val in enumerate(invoice_number[::-1]))
-            self.ref_number = invoice_number + str((10 - (checksum % 10)) % 10)
+            ref_tmp=invoice_number + str((10 - (checksum % 10)) % 10)
+            rf_check=98 - int(ref_tmp+"271500") % 97
+            if rf_check < 10:
+                self.ref_number = "RF0%s%s" % (rf_check,ref_tmp)
+            else:
+                self.ref_number = "RF%s%s" % (rf_check,ref_tmp)
             self.invoice_number = invoice_number
         else:
             self.invoice_number = False
@@ -56,12 +61,15 @@ class AccountInvoice(models.Model):
             amount_total_string = amount_total_string.zfill(9)
             receiver_bank_account = re\
                 .sub("[^0-9]", "", str(primary_bank_account.acc_number))
-            ref_number_filled = self.ref_number.zfill(20)
-            self.barcode_string = '4' \
+            ref = str(self.ref_number)
+            ref_check = ref[2:4]
+            ref_code = ref[4:]
+            ref_number_filled = ref_check + ref_code.zfill(21)
+            self.barcode_string = '5' \
                                   + receiver_bank_account \
                                   + amount_total_string[:-3] \
                                   + amount_total_string[-2:] \
-                                  + "000" + ref_number_filled \
+                                  + ref_number_filled \
                                   + self.date_due[2:4] \
                                   + self.date_due[5:-3] \
                                   + self.date_due[-2:]
@@ -82,9 +90,9 @@ class AccountInvoice(models.Model):
         'Reference Number',
         compute='_compute_ref_number',
         store=True,
-        help=_('Invoice reference number in accordance with https://'
+        help=_('Invoice RF-reference number in accordance with https://'
                'www.fkl.fi/teemasivut/sepa/tekninen_dokumentaatio/Do'
-               'kumentit/kotimaisen_viitteen_rakenneohje.pdf')
+               'kumentit/kansainvalisen_viitteen_rakenneohje.pdf')
     )
 
     date_delivered = fields.Date(
