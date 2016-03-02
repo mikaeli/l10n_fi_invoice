@@ -1,7 +1,7 @@
 Finnish Invoice RF
 ==================
 
-#### Version: 0.3.0
+#### Version: 0.3.1
 
 This is RF-version of Finnish invoices by Avoin Systems.
 RF-modification was made by Mikael Ikivesi as our Co-Operative
