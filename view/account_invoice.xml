@@ -7,19 +7,15 @@
             <field name="model">account.invoice</field>
             <field name="inherit_id" ref="account.invoice_form"/>
             <field name="arch" type="xml">
-                <xpath expr="//sheet[@string='Invoice']/group/group[2]/field[@name='date_invoice']" position="after">
+                <field name="date_invoice" position="after">
                     <field name="date_delivered"/>
-                </xpath>
-
-            <field name="date_delivered" position="after">
                     <field name="invoice_number"/>
                     <field name="ref_number"/>
-            </field>
-
-            <xpath expr="//page[@string='Other Info']//group/field[@name='name']" position="after">
+                </field>
+                <!-- Note: This field does not work with Odoo 9 -->
+                <field name="payment_term" position="after">
                     <field name="barcode_string"/>
-            </xpath>
-
+                </field>
             </field>
         </record>
     </data>

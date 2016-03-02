@@ -3,6 +3,7 @@
     <data>
         <template id="report_layout_finnish">
             <t t-name="l10n_fi_invoice.external_layout_finnish">
+             <t t-foreach="docs" t-as="o">
                 <!-- Multicompany -->
                 <t t-if="o and 'company_id' in o">
                     <t t-set="company" t-value="o.company_id"/>
@@ -14,6 +15,7 @@
                 <t t-call="l10n_fi_invoice.report_layout_header_finnish"/>
                 <t t-raw="0"/>
                 <t t-call="l10n_fi_invoice.report_layout_footer_finnish"/>
+             </t>
             </t>
         </template>
     </data>

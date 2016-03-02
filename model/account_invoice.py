@@ -73,8 +73,11 @@ class AccountInvoice(models.Model):
                                   + self.date_due[2:4] \
                                   + self.date_due[5:-3] \
                                   + self.date_due[-2:]
+            self.primary_bank_accnum = str(primary_bank_account.acc_number)
         else:
             self.barcode_string = False
+            self.primary_bank_accnum = False
+
 
     invoice_number = fields.Char(
         'Invoice number',
@@ -107,6 +110,13 @@ class AccountInvoice(models.Model):
         help=_('https://www.fkl.fi/teemasivut/sepa/tekninen_dokumentaatio/Dok'
                'umentit/Pankkiviivakoodi-opas.pdf')
     )
+
+    primary_bank_accnum = fields.Char(
+        'Primary bank account number',
+        compute='_compute_barcode_string',
+        help=_('Primary bank account number')
+    )
+
 
     @api.multi
     def invoice_print(self):

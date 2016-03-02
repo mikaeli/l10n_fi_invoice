@@ -4,12 +4,14 @@
         <template id="report_invoice_finnish_document">
             <t t-name="account.report_invoice_document">
                 <t t-call="l10n_fi_invoice.report_layout_finnish">
+                 <t t-foreach="docs" t-as="o">
                     <div class="header" style="height: 2.62cm; position: relative;">
                         <style type="text/css">
                             .padding-correction {
                             padding-right: 15px;
                             padding-left: 15px;
                             }
+                            * {font-family: "Times New Roman", Georgia, Serif;}
                         </style>
                         <div class="padding-correction" style="position: absolute; width: 100%; bottom: 0;">
                             <div class="row">
@@ -133,6 +135,8 @@
                             .payment-terms p {
                             margin-bottom: 0;
                             }
+
+                            * {font-family: "Times New Roman", Georgia, Serif;}
                         </style>
                         <div class="padding-correction" style="min-height: 11.3cm">
                             <div class="row">
@@ -491,6 +495,7 @@
                             </div>
                         </div>
                     </div>
+                 </t>
                 </t>
             </t>
         </template>
@@ -511,6 +516,8 @@
                 name="l10n_fi_invoice.report_invoice_finnish_translate"
                 file="l10n_fi_invoice.report_invoice_finnish_translate"
                 />
+
+
 
         <!--Make custom paper format to eliminate margins-->
         <record id="paperformat_finnish" model="report.paperformat">
@@ -533,6 +540,8 @@
         <record id="report_invoice_finnish" model="ir.actions.report.xml">
             <field name="paperformat_id" ref="paperformat_finnish"/>
         </record>
+
+
 
     </data>
 </openerp>
