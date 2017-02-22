@@ -337,6 +337,9 @@
                                     <div>Y-tunnus:
                                         <span t-field="o.company_id.company_registry"/>
                                     </div>
+                                    <div>VAT:
+                                        <span t-field="o.company_id.vat"/>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row row-eq-height border-bottom" style="border-top: 1px dashed gray">
